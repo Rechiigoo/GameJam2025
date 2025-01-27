@@ -1,2 +1,2 @@
-# GameJam2025
-Game Jam 2025 Project
+# burbujas versión buena
+ Juego GJ 2025

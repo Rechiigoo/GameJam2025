@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Vida : MonoBehaviour
 {
-    public int vidaTanque = 9;
+    
+    public int vidaMaxima = 12;
+    public int vidaTanque = 0;
     
     private int vida66;
     private int vida33 = 3;
@@ -17,6 +19,7 @@ public class Vida : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vidaTanque = vidaMaxima;
         vida66 = (vidaTanque/3)*2;
         vida33 = vidaTanque/3;
     }
@@ -48,5 +51,12 @@ public class Vida : MonoBehaviour
     }
     public void quitaVidaTanque(int daño){
         vidaTanque = vidaTanque - daño;
+    }
+    public void regenerarVida(int vida){
+        if(vidaMaxima >= vidaTanque + vida){
+            vidaTanque = vidaTanque + vida;
+        }else{
+            vidaTanque = vidaMaxima;
+        }
     }
 }

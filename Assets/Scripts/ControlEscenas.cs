@@ -5,15 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class ControlEscenas : MonoBehaviour {
     public void OnJugar() {
-        SceneManager.LoadScene("DemoDay");
+        Debug.Log("jugar");
+        SceneManager.LoadScene("");
     }
 
     public void OnCreditos() {
-        SceneManager.LoadScene("CreditosScene");
+        Debug.Log("creditos");
+        SceneManager.LoadScene("05CreditsScene");
     }
 
-    public void OnAyuda() {
-        SceneManager.LoadScene("AyudaScene");
+    public void OnVictoria() {
+        Debug.Log("victoria");
+        SceneManager.LoadScene("04VictoryScene");
+    }
+    
+    public void OnDerrota() {
+        Debug.Log("derrota");
+        SceneManager.LoadScene("03DerrotaScene");
     }
 
     public void OnSalir() {
@@ -21,7 +29,8 @@ public class ControlEscenas : MonoBehaviour {
     }
 
     public void OnMenu() {
-        SceneManager.LoadScene("MenuScene");
+        Debug.Log("menu");
+        SceneManager.LoadScene("01InicioScene");
     }
 }
 

@@ -8,12 +8,14 @@ public class MovimientoJugador : MonoBehaviour {
     public float speed;
     private Vector2 move;
 
-    public Transform spawnPoint; //punto de salida de la bala
+    public Transform spawnPointl1; //punto de salida de la bala
+    public Transform spawnPointl2; //punto de salida de la bala
+    public Transform spawnPointb; //punto de salida de la bala
     public Transform respawn; //punto de salida de la bala
     public GameObject bullet; // bala
 
-    private int balasL = 20;
-    private int balasB = 5;
+    private int balasL = 300;
+    private int balasB = 300;
     public float shotForce;  //fuerza disparo
     public float shotRate = 0.5f;  // tiempo hasta proxino disparo 
     private float shotRateTime = 0;  //tiempo desde que se disparo
@@ -47,8 +49,8 @@ public class MovimientoJugador : MonoBehaviour {
 
     public void recargaMuncion() {
         if (canRecarga) {
-            balasL = 20;
-            balasB = 5;
+            balasL = 90000;
+            balasB = 90000;
             Debug.Log("Recarga");
         }
     }
@@ -63,9 +65,9 @@ public class MovimientoJugador : MonoBehaviour {
         if (canDisparol1  && balasL > 0) {
 
             if (Time.time > shotRateTime) {
-                GameObject newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+                GameObject newBullet = Instantiate(bullet, spawnPointl1.position, spawnPointl1.rotation);
 
-                newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
+                newBullet.GetComponent<Rigidbody>().AddForce(spawnPointl1.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
                 shotRateTime = Time.time + shotRate;
 
                 Destroy(newBullet, 3);
@@ -73,6 +75,7 @@ public class MovimientoJugador : MonoBehaviour {
 
             balasL--;
             Debug.Log("Disparol1 " + balasL);
+            Debug.Log("Puede disparar? " + canDisparol1);
         }
     }
 
@@ -80,9 +83,9 @@ public class MovimientoJugador : MonoBehaviour {
         if (canDisparol2 && balasL > 0) {
 
             if (Time.time > shotRateTime) {
-                GameObject newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+                GameObject newBullet = Instantiate(bullet, spawnPointl2.position, spawnPointl2.rotation);
 
-                newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
+                newBullet.GetComponent<Rigidbody>().AddForce(spawnPointl2.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
                 shotRateTime = Time.time + shotRate;
 
                 Destroy(newBullet, 3);
@@ -97,9 +100,9 @@ public class MovimientoJugador : MonoBehaviour {
         if (canDisparob && balasB > 0) {
 
             if (Time.time > shotRateTime) {
-                GameObject newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+                GameObject newBullet = Instantiate(bullet, spawnPointb.position, spawnPointb.rotation);
 
-                newBullet.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
+                newBullet.GetComponent<Rigidbody>().AddForce(spawnPointb.forward * shotForce * Time.deltaTime, ForceMode.Impulse);
                 shotRateTime = Time.time + shotRate;
 
                 Destroy(newBullet, 3);
