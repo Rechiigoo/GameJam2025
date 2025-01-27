@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class EnemigosIA : MonoBehaviour {
 
-    public ControladorMusica controladorMusica;
     
     public Transform player;
     public NavMeshAgent agent;
@@ -20,7 +19,6 @@ public class EnemigosIA : MonoBehaviour {
     void Start() {
         agent = GetComponent<NavMeshAgent>();
         vida = FindObjectOfType<Vida>();
-        controladorMusica = FindObjectOfType<ControladorMusica>();
     }
 
     // Update is called once per frame
@@ -61,17 +59,16 @@ public class EnemigosIA : MonoBehaviour {
             //Si es un bicho tocho HACER IF AQUI
             if(gameObject.CompareTag("EnemigoTocho")){
                 vida.quitaVidaTanque(3);
-                //Debug.Log("tocho");
+                Debug.Log("tocho");
             }else {
                 vida.quitaVidaTanque(dañoEnemigoNormal);
-                //Debug.Log("normal");
+                Debug.Log("normal");
             }
                 
             Destroy(gameObject);
                         
             Debug.Log(vida.vidaTanque);
-            //Debug.Log("Se resta vida");
-            //controladorMusica.sonarMusica(2);
+            Debug.Log("Se resta vida");
 
             
         }else if(collision.gameObject.CompareTag("Barco") && atropello.atropello == true){
