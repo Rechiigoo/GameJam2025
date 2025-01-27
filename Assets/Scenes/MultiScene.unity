@@ -1979,7 +1979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429882066530430920, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
       propertyPath: m_Name
-      value: Alfonso
+      value: Jugador2
       objectReference: {fileID: 0}
     - target: {fileID: 8429882066530430920, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
       propertyPath: m_IsActive
@@ -2202,6 +2202,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 2695868086790176673, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7432868650405789690, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.19
@@ -2242,9 +2246,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8052233465043110137, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8429882066530430920, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
       propertyPath: m_Name
-      value: Alfonso2
+      value: Jugador
       objectReference: {fileID: 0}
     - target: {fileID: 8429882066530430920, guid: 3aa826825a4ad5e4f80247a1ac396e88, type: 3}
       propertyPath: m_IsActive
@@ -3596,6 +3604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mapa
       objectReference: {fileID: 0}
+    - target: {fileID: 5117269737276333718, guid: f2a3a50e5a43a7b4e9bb8aac5c2ed3d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b560a649e338794ebd3320519d69f79, type: 2}
     - target: {fileID: 6159819195323411483, guid: f2a3a50e5a43a7b4e9bb8aac5c2ed3d5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3604,6 +3616,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Reespawn
       objectReference: {fileID: 0}
+    - target: {fileID: 7887389054490525368, guid: f2a3a50e5a43a7b4e9bb8aac5c2ed3d5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b560a649e338794ebd3320519d69f79, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4333,7 +4349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734932249}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdb89a8649dac9e4db5704f4e8cdac60, type: 3}
   m_Name: 
@@ -4360,7 +4376,7 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
