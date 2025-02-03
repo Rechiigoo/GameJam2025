@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    public float speed = 5f; // Velocidad de movimiento
+    public float speed = 15f; // Velocidad de movimiento
     public float gravity = -9.81f; // Fuerza de gravedad
     public float velocityRotate = 140; // velocidad de giro
     
